@@ -1,0 +1,248 @@
+$primaly-clr-1: #fbe6c2;
+$secondary-clr-1: #383e56;
+$transition: all 0.3s linear;
+$shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  padding: 1rem 2rem;
+}
+
+.error {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem;
+  background: $primaly-clr-1;
+  color: $secondary-clr-1;
+  width: 30%;
+  margin: 0 auto;
+}
+
+// ################### Navbar #################
+.navbar {
+  background: $primaly-clr-1;
+  color: $secondary-clr-1;
+  box-shadow: $shadow;
+  margin-bottom: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .nav-search {
+    input {
+      padding: 0.3rem;
+      border: none;
+      padding: 0.5rem 0.5rem;
+      width: 15rem;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    i {
+      margin-left: 0.5rem;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+// ################### Form ####################
+.form {
+  text-align: center;
+  min-width: 350px;
+  padding-top: 7rem;
+
+  .form-control {
+    text-align: left;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 35rem;
+    box-shadow: $shadow;
+    padding: 1rem;
+    background: $primaly-clr-1;
+    color: $secondary-clr-1;
+
+    .title {
+      display: block;
+      margin: 0rem auto;
+      width: 95%;
+      height: 3rem;
+      border: none;
+      padding: 0 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background: $primaly-clr-1;
+      color: $secondary-clr-1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    textarea {
+      display: block;
+      margin: 0.2rem auto;
+      width: 100%;
+      height: 5rem;
+      border: none;
+      padding: 0 1.8rem;
+      font-size: 1.2rem;
+      resize: none;
+      background: $primaly-clr-1;
+      color: $secondary-clr-1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .tag {
+      display: block;
+      margin: 0 auto;
+      width: 95%;
+      height: 3rem;
+      border: none;
+      padding: 0 1rem;
+      background: $primaly-clr-1;
+      color: $secondary-clr-1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    i {
+      margin-left: 2rem;
+      font-size: 1.2rem;
+    }
+
+    input[type="file" i] {
+      margin-left: 0.3rem;
+      display: inline-block;
+    }
+
+    .btn {
+      display: block;
+      margin: 1rem 2rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background: $secondary-clr-1;
+      color: $primaly-clr-1;
+    }
+  }
+}
+
+// ################ keep ######################
+.keep-center {
+  max-width: 1280px;
+  min-width: 350px;
+  margin: 0 auto;
+
+  .keep-card {
+    margin: 2rem auto;
+    background: $primaly-clr-1;
+    color: $secondary-clr-1;
+    border-radius: 10px;
+    max-width: 25rem;
+    min-height: 20rem;
+    overflow: hidden;
+    border: 1px solid $primaly-clr-1;
+    box-shadow: $shadow;
+
+    img {
+      width: 100%;
+      height: 13rem;
+      background: transparent;
+      object-fit: cover;
+    }
+
+    .keep-title {
+      margin: 0 1rem;
+      padding: 0.5rem 0;
+    }
+
+    .keep-message {
+      margin: 0 1rem;
+      min-height: 5rem;
+    }
+
+    textarea {
+      display: block;
+      margin: 0.2rem auto;
+      width: 100%;
+      height: 5rem;
+      border: none;
+      padding: 0 0.5rem;
+      font-size: 1.2rem;
+      resize: none;
+      background: $primaly-clr-1;
+      color: $secondary-clr-1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .keep-footer {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 1rem;
+      min-height: 2rem;
+
+      button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      i {
+        font-size: 1rem;
+        color: $secondary-clr-1;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .keep-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .keep-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
